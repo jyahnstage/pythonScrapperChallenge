@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>search result</title>
+</head>
+<body>
+    
+    <main class="container">
+        <hgroup>
+            <a href="/">back to home</a>
+            <h1>Search results for "{{term}}"</h1>
+            <button><a href="/export?term={{term}}" class="export">Export to File</a></button>
+        </hgroup>
+        <figure>
+            <table role="grid">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for job in jobs %}
+                    <tr>
+                        <td>{{job.title}}</td>
+                        <td>{{job.company}}</td>
+                        <td>{{job.region}}</td>
+                        <td><a href="{{job.link}}" target="_blank">Check out Now</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </figure>
+    </main>
+</body>
+</html>

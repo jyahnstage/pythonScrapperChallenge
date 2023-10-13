@@ -1,0 +1,32 @@
+
+.index{
+    padding-top: 10rem;
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.search{
+    display: flex;
+    gap: 1rem;
+}
+#searchbtn{
+    flex-basis: 10%;
+    background-color: #3949ab;
+}
+
+hgroup{
+    display: flex;
+    justify-content: space-between;
+}
+
+a.export{
+    color: white;
+    font-weight: bold;    
+}
+
+button{
+    flex-basis: 20%;
+    background-color: #3949ab;
+}
